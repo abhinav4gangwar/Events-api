@@ -1,0 +1,16 @@
+{
+    "name": "agile",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "start": "nodemon index.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "epxress": "^0.0.1-security",
+        "mongodb": "^4.7.0",
+        "nodemon": "^2.0.16"
+    }
+}
