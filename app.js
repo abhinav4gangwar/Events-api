@@ -1,4 +1,5 @@
 const express = require("express")
+const path = require('path')
 var bodyParser = require('body-parser');
 const events = require('./routes/events');
 
@@ -8,6 +9,8 @@ const port = 2000;
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+
+app.use(express.static(path.resolve(__dirname, '/client/build')));
 
 app.use('/api/v3/app', events);
 

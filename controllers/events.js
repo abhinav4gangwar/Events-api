@@ -2,8 +2,7 @@ const { MongoClient } = require("mongodb");
 var ObjectId = require('mongodb').ObjectID;
 const url = require('url')
 const uri =
-    "mongodb+srv://abhigg12433:<pw>@cluster0.ofazqsb.mongodb.net/?retryWrites=true&w=majority";
-
+    "mongodb+srv://abhigg12433:Abhi1234.@cluster0.ofazqsb.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri);
 
 client.connect();
@@ -13,7 +12,9 @@ const Events = database.collection('Events');
 
 const getHome = async(req, res) => {
     const event = await Events.findOne({ tagline: 'abcde' });
+    console.log(event)
     return res.status(200).json(event)
+
 }
 
 
